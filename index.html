@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+
+            <div class=" rounded">
+                <p id="math-display" class="w-full pr-2 text-right text-slate-400 text-sm "></p>
+                <input type="text" id="display" class="w-full p-2 text-right " disabled>
+            </div>
+            <div class="grid grid-cols-4 gap-2">
+                <button class="border border-orange-500 bg-orange-500 rounded-lg button clear hover:bg-orange-600"
+                    onclick="calculator.clear()">C</button>
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.backspace()">Back</button>
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendOperator('%')">%
+                </button>
+                <button class="border text-white bg-gray-500 border-gray-300 rounded-lg button operator"
+                    onclick="calculator.appendOperator('/')">/</button>
+
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendNumber('7')">7</button>
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendNumber('8')">8</button>
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendNumber('9')">9</button>
+                    <button class="border text-white bg-gray-500 border-gray-300 rounded-lg button operator"
+                    onclick="calculator.appendOperator('*')">*</button>
+
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendNumber('4')">4</button>
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendNumber('5')">5</button>
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendNumber('6')">6</button>
+                    <button class="border text-white bg-gray-500 border-gray-300 rounded-lg button operator"
+                    onclick="calculator.appendOperator('-')">-</button>
+
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendNumber('1')">1</button>
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendNumber('2')">2</button>
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendNumber('3')">3</button>
+                    <button class="border text-white bg-gray-500 border-gray-300 rounded-lg button operator"
+                    onclick="calculator.appendOperator('+')">+</button>
+                <button class="border text-white bg-gray-500 border-gray-300 col-span-2 rounded-lg button"
+                    onclick="calculator.appendNumber('0')">0</button>
+
+                <button class="border bg-gray-200 border-gray-300 rounded-lg button"
+                    onclick="calculator.appendOperator('.')">.</button>
+                <button class="border text-white bg-blue-500 border-blue-300 rounded-lg button equal"
+                    onclick="calculator.calculate()">=</button>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
